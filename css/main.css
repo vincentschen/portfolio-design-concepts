@@ -1,0 +1,213 @@
+body {
+	overflow:hidden;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    font-family: 'Josefin Slab', 'Myriad Pro', Arial, sans-serif;
+}
+
+.container > input,
+.container > a {
+    position: fixed;
+    bottom: 0px;
+    width: 20%;
+    cursor: pointer;
+    font-size: 16px;
+    height: 34px;
+    line-height: 34px;
+}
+ 
+.container > input {
+    opacity: 0;
+    z-index: 1000;
+}
+ 
+.container > a {
+    z-index: 10;
+    font-weight: 700;
+    background: #CCEDFB;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
+}
+
+.container:before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 34px;
+    background: #CCEDFB;
+    z-index: 9;
+    bottom: 0;
+}
+
+#content-pos-1, #content-pos-1 + a {
+    left: 0;
+}
+ 
+#content-pos-2, #content-pos-2 + a {
+    left: 20%;
+}
+ 
+#content-pos-3, #content-pos-3 + a {
+    left: 40%;
+}
+ 
+#content-pos-4, #content-pos-4 + a {
+    left: 60%;
+}
+ 
+#content-pos-5, #content-pos-5 + a {
+    left: 80%;
+}
+
+.container > input:checked + a,
+.container > input:checked:hover + a {
+    background: #3F8BAB;
+}
+
+.container > input:checked + a:after,
+.container > input:checked:hover + a:after{
+    bottom: 100%;
+    border: solid transparent;
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: #CCEDFB;
+    border-width: 20px;
+    left: 50%;
+    margin-left: -20px;
+}
+
+.st-container > input:hover + a{
+    background: #AD244F;
+}
+ 
+.st-container > input:hover + a:after {
+    border-bottom-color: #AD244F;
+}
+
+.scroll,
+.content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+ 
+.scroll {
+    top: 0;
+    left: 0;
+    transition: all 0.6s ease-in-out;
+     
+    /* Let's enforce some hardware acceleration */
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+}
+ 
+.content{
+    background: #fff;
+    overflow: hidden;
+} 
+
+#content-pos-1:checked ~ .scroll {
+    transform: translateY(0%);
+}
+#content-pos-2:checked ~ .scroll {
+    transform: translateY(-100%);
+}
+#content-pos-3:checked ~ .scroll {
+    transform: translateY(-200%);
+}
+#content-pos-4:checked ~ .scroll {
+    transform: translateY(-300%);
+}
+#content-pos-5:checked ~ .scroll {
+    transform: translateY(-400%);
+}
+
+.top-triangle{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -100px;
+    background: #7CC2E0;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.content h2 {
+    color: #e23a6e;
+    text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
+    position: absolute;
+    font-size: 54px;
+    font-weight: 900;
+    width: 80%;
+    left: 10%;
+    text-align: center;
+    line-height: 50px;
+    margin: -70px 0 0 0;
+    padding: 0;
+    top: 50%;
+    -webkit-backface-visibility: hidden;
+}
+
+#content-pos-1:checked ~ .scroll #content-1 h2,
+#content-pos-2:checked ~ .scroll #content-2 h2,
+#content-pos-3:checked ~ .scroll #content-3 h2,
+#content-pos-4:checked ~ .scroll #content-4 h2,
+#content-pos-5:checked ~ .scroll #content-5 h2{
+	animation: moveDown 0.6s ease-in-out 0.2s backwards;
+}
+ 
+@keyframes moveDown{
+    0% { 
+        transform: translateY(-40px); 
+        opacity: 0;
+    }
+    100% { 
+        transform: translateY(0px);  
+        opacity: 1;
+    }
+}
+
+.content p {
+    position: absolute;
+    text-align: center;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8b8b8b;
+    z-index: 2;
+    padding: 0;
+    width: 50%;
+    left: 25%;
+    top: 50%;
+    margin: 10px 0 0 0;
+    -webkit-backface-visibility: hidden;
+}
+
+#content-pos-1:checked ~ .scroll #st-panel-1 p,
+#content-pos-2:checked ~ .scroll #st-panel-2 p,
+#content-pos-3:checked ~ .scroll #st-panel-3 p,
+#content-pos-4:checked ~ .scroll #st-panel-4 p,
+#content-post-5:checked ~ .scroll #st-panel-5 p{
+    animation: moveUp 0.6s ease-in-out 0.2s backwards;
+}
+ 
+@keyframes moveUp{
+    0% { 
+        transform: translateY(40px); 
+        opacity: 0;
+    }
+    100% { 
+        transform: translateY(0px);  
+        opacity: 1;
+    }
+}
