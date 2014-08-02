@@ -118,18 +118,26 @@ body {
 
 #content-pos-1:checked ~ .scroll {
     transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+
 }
 #content-pos-2:checked ~ .scroll {
     transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
 }
 #content-pos-3:checked ~ .scroll {
     transform: translateY(-200%);
+    -webkit-transform: translateY(-200%);
 }
 #content-pos-4:checked ~ .scroll {
     transform: translateY(-300%);
+    -webkit-transform: translateY(-300%);
+
 }
 #content-pos-5:checked ~ .scroll {
     transform: translateY(-400%);
+    -webkit-transform: translateY(-400%);
+
 }
 
 .top-triangle{
@@ -141,6 +149,8 @@ body {
     margin-left: -100px;
     background: #7CC2E0;
     transform: translateY(-50%) rotate(45deg);
+    -webkit-transform: translateY(-50%) rotate(45deg);
+
 }
 
 .content h2 {
@@ -170,10 +180,14 @@ body {
 @keyframes moveDown{
     0% { 
         transform: translateY(-40px); 
+        -webkit-transform: translateY(-40px); 
+
         opacity: 0;
     }
     100% { 
         transform: translateY(0px);  
+        -webkit-transform: translateY(0px);  
+
         opacity: 1;
     }
 }
@@ -181,10 +195,14 @@ body {
 @-webkit-keyframes moveDown { /* Safari and Chrome */
     0% { 
         transform: translateY(-40px); 
+        -webkit-transform: translateY(-40px);
+
         opacity: 0;
     }
     100% { 
-        transform: translateY(0px);  
+        transform: translateY(0px); 
+        -webkit-transform: translateY(0px); 
+ 
         opacity: 1;
     }
 }
@@ -201,39 +219,6 @@ body {
     left: 25%;
     top: 50%;
     margin: 10px 0 0 0;
-    -webkit-backface-visibility: hidden;
-}
-
-#content-pos-1:checked ~ .scroll #content-1 p,
-#content-pos-2:checked ~ .scroll #content-2 p,
-#content-pos-3:checked ~ .scroll #content-3 p,
-#content-pos-4:checked ~ .scroll #content-4 p,
-#content-post-5:checked ~ .scroll #content-5 p{
-    animation: moveUp 0.6s ease-in-out 0.2s backwards;
-    -webkit-animation:moveUp 0.6s ease-in-out 0.2s backwards; /* Safari and Chrome */
-
-}
- 
-@keyframes moveUp{
-    0% { 
-        transform: translateY(40px); 
-        opacity: 0;
-    }
-    100% { 
-        transform: translateY(0px);  
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes moveUp { /* Safari and Chrome */
-    0% { 
-        transform: translateY(40px); 
-        opacity: 0;
-    }
-    100% { 
-        transform: translateY(0px);  
-        opacity: 1;
-    }
 }
 
 /* Colored sections */
@@ -288,6 +273,8 @@ body {
     [data-icon]:after {
         font-size: 60px;
         transform: rotate(-45deg) translateY(15%);
+        -webkit-transform: rotate(-45deg) translateY(15%);
+
     }
 }
 
