@@ -86,12 +86,12 @@ body {
     margin-left: -20px;
 }
 
-.st-container > input:hover + a{
-    background: #AD244F;
+.container > input:hover + a{
+    background: #7CC2E0;
 }
  
-.st-container > input:hover + a:after {
-    border-bottom-color: #AD244F;
+.container > input:hover + a:after {
+    border-bottom-color: #7CC2E0;
 }
 
 .scroll,
@@ -106,7 +106,6 @@ body {
     left: 0;
     transition: all 0.6s ease-in-out;
      
-    /* Let's enforce some hardware acceleration */
     -webkit-transform: translate3d(0, 0, 0);
     -webkit-backface-visibility: hidden;
 }
@@ -145,7 +144,6 @@ body {
 
 .content h2 {
     color: #3F8BAB;
-    text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
     position: absolute;
     font-size: 54px;
     font-weight: 900;
@@ -239,21 +237,21 @@ body {
 
 /* Colored sections */
  
-.inverse-color,
+.colored,
 .top-triangle{
     background: #7CC2E0;
 }
-.inverse-color [data-icon]:after {
+.colored [data-icon]:after {
     color: #7CC2E0;
 }
-.inverse-color .top-triangle {
+.colored .top-triangle {
     background: #fff;
 }
-.inverse-color h2 {
+.colored h2 {
     color: #fff;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 } 
-.inverse-color p {
+.colored p {
     color: rgba(255,255,255,0.8);
 }
 
