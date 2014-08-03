@@ -1,3 +1,20 @@
+/* Fonts */
+
+@font-face {
+    font-family: BonvenoCF;
+    src: url(../fonts/BonvenoCF/BonvenoCF-light.otf);
+}
+
+/* Image Styling */
+
+.avatar {
+    width: 125px;
+    border-radius: 125px;
+    vertical-align: -90%;
+}
+
+/*Scrolling Tabs */ 
+
 body {
 	overflow:hidden;
 }
@@ -8,7 +25,7 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    font-family: 'Josefin Slab', 'Myriad Pro', Arial, sans-serif;
+    font-family: 'BonvenoCF', 'Myriad Pro', Arial, sans-serif;
 }
 
 .container > input,
@@ -30,7 +47,7 @@ body {
 .container > a {
     z-index: 10;
     font-weight: 700;
-    background: #CCEDFB;
+    background: #9DDCF7;
     color: #fff;
     text-align: center;
     text-shadow: 1px 1px 1px rgba(31, 36, 39, 0.2);
@@ -42,7 +59,7 @@ body {
     position: fixed;
     width: 100%;
     height: 34px;
-    background: #CCEDFB;
+    background: #9DDCF7;
     z-index: 9;
     bottom: 0;
 }
@@ -145,11 +162,14 @@ body {
     height: 200px;
     position: absolute;
     top: 0px;
-    left: 25%;
+    left: 50%;
     margin-left: -100px;
     background: #7CC2E0;
     transform: translateY(-50%) rotate(45deg);
     -webkit-transform: translateY(-50%) rotate(45deg);
+    -moz-transform: translateY(-50%) rotate(45deg);
+    -o-transform: translateY(-50%) rotate(45deg);
+    -ms-transform: translateY(-50%) rotate(45deg);
 
 }
 
@@ -162,7 +182,7 @@ body {
     left: 10%;
     text-align: center;
     line-height: 50px;
-    margin: -70px 0 0 0;
+    margin: -150px 0 0 0;
     padding: 0;
     top: 50%;
     -webkit-backface-visibility: hidden;
@@ -238,8 +258,8 @@ body {
 .content p {
     position: absolute;
     text-align: center;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 25px;
+    line-height: 36px;
     color: #8b8b8b;
     z-index: 2;
     padding: 0;
@@ -316,14 +336,11 @@ body {
     }
 }
 
-/* Colored sections */
+/* Inverse Coloring */
  
 .colored,
 .top-triangle{
     background: #7CC2E0;
-}
-.colored [data-icon]:after {
-    color: #7CC2E0;
 }
 .colored .top-triangle {
     background: #fff;
@@ -362,7 +379,7 @@ body {
     .top-triangle{
         width: 120px;
         height: 120px;
-        margin-left: -60px;
+        margin-left: -30px;
     }
      
 }
