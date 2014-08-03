@@ -5,6 +5,18 @@
     src: url(../fonts/BonvenoCF/BonvenoCF-light.otf);
 }
 
+.spaced {
+    margin: 10px;
+}
+
+.contact-icon a { 
+    color: #8b8b8b;
+    text-decoration: none ;
+}
+
+.contact-icon a:hover { 
+    color: #5c5c5c;
+}
 /* Image Styling */
 
 .avatar {
@@ -266,7 +278,7 @@ body {
     width: 50%;
     left: 25%;
     top: 50%;
-    margin: 10px 0 0 0;
+    margin: 0px 0 0 0;
 }
 
 #content-pos-1:checked ~ .scroll #content-1 p,
@@ -382,16 +394,4 @@ body {
         margin-left: -30px;
     }
      
-}
-
-/* Contact Tool Tips */ 
-
-.contact-wrapper li a{
-    display: block;
-    width: 68px;
-    height: 70px;
-    margin: 0 2px;
-    outline: none;
-    background: transparent url(../images/icons.png) no-repeat top left;
-    position: relative;
 }
