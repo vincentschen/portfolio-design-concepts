@@ -17,12 +17,23 @@
 .contact-icon a:hover { 
     color: #5c5c5c;
 }
+
 /* Image Styling */
 
 .avatar {
     width: 125px;
     border-radius: 125px;
     vertical-align: -90%;
+}
+
+.project {
+    height: 150px; 
+    padding: 10px;
+    border-style: solid;
+    border-radius: 20px;
+    background-color: #fff;
+    /*background-color: #b6b6b6;*/
+    margin: 20px;
 }
 
 /*Scrolling Tabs */ 
@@ -376,6 +387,7 @@ body {
         width: 90%;
         left: 5%;
         margin-top: 0;
+        font-size: 20px;
     }
      
     .container> a {
