@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: BonvenoCF;
-    src: url(../fonts/BonvenoCF/BonvenoCF-Light.otf)
+    src: url(../assets/fonts/BonvenoCF/BonvenoCF-Light.otf)
 }
 
 .spaced {
@@ -16,6 +16,15 @@
 
 .contact-icon a:hover { 
     color: #5c5c5c;
+}
+
+.download a { 
+    color: #fff;
+    text-decoration: none ;
+}
+
+.download a:hover { 
+    color: #b6b6b6;
 }
 
 /* Image Styling */
