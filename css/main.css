@@ -45,6 +45,14 @@
     margin: 20px;
 }
 
+::selection {
+  background: #ffb7b7; 
+}
+
+a:visited {
+  background: #ffb7b7; 
+}
+
 /*Scrolling Tabs */ 
 
 body {
