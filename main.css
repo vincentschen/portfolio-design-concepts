@@ -7,7 +7,9 @@
     font-size: 20px;
 }
 
-
+.link {
+    padding: 5px;
+}
 
 body {
     margin-top: 50px;
